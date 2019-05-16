@@ -27,6 +27,9 @@ async function alusta() {
   }
 
   function write() {
+    voitotFile = voitotFile.replace(/.$/,"]")
+    rivitFile = rivitFile.replace(/.$/,"]")
+
     fs.writeFile("voitotArray", voitotFile, function(err) {
       if(err) {
           return console.log(err);
